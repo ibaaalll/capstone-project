@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", Helvetica;
+}
+
+body{
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #f7f7f7;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgb(186,135,89);
+}
+.sidebar:hover{
+    width: 350px;
+    transition: 0.5s;
+}
+
+.logo{
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+}
+.logo span{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active{
+    background-color: whitesmoke;
+}
+
+.menu a{
+    color: rgb(50,44,43);
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main{
+    position: relative;
+    /* background-color:#f7f7f7; */
+    background-color:rgb(230, 219, 202);
+    width: 100%;
+    padding: 1rem;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(186,135,89);
+    border-radius: 10px;
+    box-shadow: 10px gray;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header_title{
+    color: rgb(50,44,43);
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_box{
+    background-color:#f7f7f7;
+    border-radius: 15px;
+    color: rgb(50,44,43);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 12px;
+
+}
+
+.search_box input{
+    background: transparent;
+    padding: 10px;
+}
+
+.search_box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search_box i:hover{
+    transform: scale(1.1);
+}
+
+.scorecard_container{
+    background-color:rgb(255, 252, 246);
+    /* border-color: #f7f7f7; */
+    /* border-style: groove; */
+    /* border-width: 2px; */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.scorecard_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.scorecard_title{
+    color: rgb(50,44,43);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.scorecard{
+    background-color: rgb(230, 219, 202);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.scorecard:hover{
+    transform: translateY(-5px);
+}
+
+.scorecard_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 400;
+}
+.amount_value{
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.icon{
+    color: #f7f7f7;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: rgb(186,135,89);;
+}
+.scorecard_detail{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+.chart_container{
+    background-color: rgb(255, 252, 246);
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.chart_content{
+    width: 100%;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Dashboard Coffe Shop Sales 18</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/img/coffeeshop2.png"/>
+        </div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#" >
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Report</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Products</span>
+                </a>
+            </li> 
+            <li class="logout">
+                <a href="/login.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <div class="header_title">
+                <span>Coffe Shop Sales 18</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user">
+                <div class="search_box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
+                <img src="assets/img/user.png" alt="">
+            </div>
+        </div>
+        <!-- scorecard-content -->
+        <div class="scorecard_container">
+            <h3 class="main_title">SCORECARD</h3>
+            <div class="scorecard_content">
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                Total Sales (QTY)
+                            </span>
+                            <span class="amount_value">
+                                214,470
+                            </span>
+                        </div>
+                        <i class="fa fa-line-chart icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+                <!-- Total Revenue -->
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                Total Revenue ($)
+                            </span>
+                            <span class="amount_value">
+                                $700,000
+                            </span>
+                        </div>
+                        <i class="fas fa-dollar-sign icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+                <!-- AVG Sales -->
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                AVG Sales per Item (QTY)
+                            </span>
+                            <span class="amount_value">
+                                1.44
+                            </span>
+                        </div>
+                        <i class="fas fa-chart-bar icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+                <!-- AVG Revenue per item  -->
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                AVG Revenue per item ($)
+                            </span>
+                            <span class="amount_value">
+                                $5
+                            </span>
+                        </div>
+                        <i class="fas fa-dollar-sign icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- chart-content -->
+        <div class="chart_container">
+            <h3 class="main_title">Judul Chart</h3>
+            <div class="chart_content">
+                *ini adalah chart* -- js
+            </div>
+        </div>
+    </div>
+</body>
+</html>
