@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Dashboard Coffe Shop Sales 18</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/img/coffeeshop2.png"/>
+        </div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#" >
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Report</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Products</span>
+                </a>
+            </li> 
+            <li class="logout">
+                <a href="/login.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <div class="header_title">
+                <span>Coffe Shop Sales 18</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user">
+                <div class="search_box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
+                <img src="assets/img/user.png" alt="">
+            </div>
+        </div>
+        <!-- scorecard-content -->
+        <div class="scorecard_container">
+            <h3 class="main_title">SCORECARD</h3>
+            <div class="scorecard_content">
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                Total Sales (QTY)
+                            </span>
+                            <span class="amount_value">
+                                214,470
+                            </span>
+                        </div>
+                        <i class="fa fa-line-chart icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+                <!-- Total Revenue -->
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                Total Revenue ($)
+                            </span>
+                            <span class="amount_value">
+                                $700,000
+                            </span>
+                        </div>
+                        <i class="fas fa-dollar-sign icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+                <!-- AVG Sales -->
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                AVG Sales per Item (QTY)
+                            </span>
+                            <span class="amount_value">
+                                1.44
+                            </span>
+                        </div>
+                        <i class="fas fa-chart-bar icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+                <!-- AVG Revenue per item  -->
+                <div class="scorecard">
+                    <div class="scorecard_header">
+                        <div class="amount">
+                            <span class="title">
+                                AVG Revenue per item ($)
+                            </span>
+                            <span class="amount_value">
+                                $5
+                            </span>
+                        </div>
+                        <i class="fas fa-dollar-sign icon"></i>
+                    </div>
+                    <span class="scorecard_detail">
+                        isi growth%
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- chart-content -->
+        <div class="chart_container">
+            <h3 class="main_title">Number fo Sales by Store</h3>
+            <div class="chart_content">
+                <canvas class="pieChart"></canvas>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        <script>
+            // setup 
+            const data = [{
+              labels: ['Astoria', 'Hells kitchen', 'Lower Manhattan'],
+              datasets: [{
+                label: 'dataset.json',
+                data: [],
+                backgroundColor: [],
+                borderColor: [],
+                borderWidth: 1,
+              }]
+            },
+
+            // config 
+                const config = {
+                    type: 'bar', 'data'
+                      options: {
+                        scales: {
+                            y: {beginAtZero: truetrue}
+                        }
+                    }
+                }
+            
+                // render init block
+                const pieChart = new Chart(
+                document.getElementById('pieChart'),
+                config
+                );
+
+                // Instantly assign Chart.js version
+                const chartVersion = document.getElementById('chartVersion');
+                chartVersion.innerText = Chart.version;
+        </script>
+        <div class="chart_container">
+            <h3 class="main_title">Revenue of Contribution%</h3>
+            <br>
+            <h3 class="main_title">by Product categories</h3>
+            <div class="chart_content">
+                <canvas class="barChart1"></canvas>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        <script>
+            // setup 
+            const data = [{
+              labels: ['Astoria', 'Hells kitchen', 'Lower Manhattan'],
+              datasets: [{
+                label: 'dataset.json',
+                data: [],
+                backgroundColor: [],
+                borderColor: [],
+                borderWidth: 1,
+              }]
+            },
+
+            // config 
+                const config = {
+                    type: 'bar', 'data'
+                      options: {
+                        scales: {
+                            y: {beginAtZero: truetrue}
+                        }
+                    }
+                }
+            
+                // render init block
+                const pieChart = new Chart(
+                document.getElementById('dataChart1'),
+                config
+                );
+
+                // Instantly assign Chart.js version
+                const chartVersion = document.getElementById('chartVersion');
+                chartVersion.innerText = Chart.version;
+        </script>
+        <div class="chart_container">
+            <h3 class="main_title">Revenue Contribution by Product Types</h3>
+            <div class="chart_content">
+                <canvas class="barChart2"></canvas>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        <script>
+            // setup 
+            const data = [{
+              labels: ['Astoria', 'Hells kitchen', 'Lower Manhattan'],
+              datasets: [{
+                label: 'dataset.json',
+                data: [],
+                backgroundColor: [],
+                borderColor: [],
+                borderWidth: 1,
+              }]
+            },
+
+            // config 
+                const config = {
+                    type: 'bar', 'data'
+                      options: {
+                        scales: {
+                            y: {beginAtZero: truetrue}
+                        }
+                    }
+                }
+            
+                // render init block
+                const pieChart = new Chart(
+                document.getElementById('barChart2'),
+                config
+                );
+
+                // Instantly assign Chart.js version
+                const chartVersion = document.getElementById('chartVersion');
+                chartVersion.innerText = Chart.version;
+        </script>
+        <div class="chart_container">
+            <h3 class="main_title">3 Product Types with Lowest Revenue</h3>
+            <div class="chart_content">
+                <canvas class="barChart3"></canvas>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        <script>
+            // setup 
+            const data = [{
+              labels: ['Astoria', 'Hells kitchen', 'Lower Manhattan'],
+              datasets: [{
+                label: 'dataset.json',
+                data: [],
+                backgroundColor: [],
+                borderColor: [],
+                borderWidth: 1,
+              }]
+            },
+
+            // config 
+                const config = {
+                    type: 'bar', 'data'
+                      options: {
+                        scales: {
+                            y: {beginAtZero: truetrue}
+                        }
+                    }
+                }
+            
+                // render init block
+                const pieChart = new Chart(
+                document.getElementById('barChart3'),
+                config
+                );
+
+                // Instantly assign Chart.js version
+                const chartVersion = document.getElementById('chartVersion');
+                chartVersion.innerText = Chart.version;
+        </script>
+    </div>
+</body>
+</html>
